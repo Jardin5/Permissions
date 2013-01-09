@@ -1,0 +1,239 @@
+groups:
+  Default:
+    default: true
+    prefix:
+    - Guest
+    suffix: ''
+    permissions:
+    - bukkit.command.list
+    - -bukkit.command.version
+    - -bukkit.command.plugins
+    - modtrs.command.modreq
+    - chestbank.use
+    - chestbank.create
+    - -playerheads.canbehead
+    - playerheads.canloosehead
+    - trademode.cantrade
+    - disguisecraft.notarget
+    - -playerheads.canbeheadmob
+    - lwc.protect
+    - trademod.currency
+    - worldguard.region.list.own
+    - essentials.help
+    - -essentials.command.plugins
+    - multiverse.core.access.*
+    - multiverse.portal.use.*
+    - essentials.kit.tools
+    - RightOn.spawn.tp
+    - essentials.tpa.accept
+    - essentials.spawn
+    - -disguisecraft.seer
+    - essentials.tpdeny
+    - 
+  Member:
+    prefix: '&f[&2Member&f]&2'
+    suffix: '&f'
+    permissions:
+    - playerheads.canbehead
+    - playerheads.canbeheadmob
+    - essentials.kit.torches
+    - essentials.kit.food
+    - essentials.kit.tools
+    inheritance:
+    - Default
+  VIP:
+    prefix: '&f[&6VIP&f]&6'
+    suffix: '&f'
+    permissions:
+    - essentials.back
+    - 
+    inheritance:
+    - Member
+  Donator 1:
+    prefix: '&f[&3Donator 1&f]&3'
+    suffix: '&f'
+    permissions:
+    - chestbank.use.networks.1
+    - chestbank.create.networks.1
+    - disguisecraft.mob.chicken
+    - disguisecraft.mob.chicken.baby
+    - magiccarpet.mc.1
+    - magiccarpet.mc.3
+    - magiccarpet.mc.5
+    - magiccarpet.mc.7
+    - magiccarpet.mc.9
+    - essentials.kit.morefood
+    - essentials.kit.moretorches
+    - essentials.kit.stonetools
+    - essentiasls.tpa
+    inheritance:
+    - VIP
+  Donator2:
+    prefix: '&f[&3Donator 2&f]&3'
+    suffix: '&f'
+    permissions:
+    - chestbank.use.networks.2
+    - chestbank.create.networks.2
+    - disguisecraft.mob.pig
+    - disguisecraft.mob.pig.saddledand reloa
+    - disguisecraft.mob.pig.baby
+    - magiccarpet.ml
+    - essentials.kit.
+    inheritance:
+    - Donator1
+  Donator3:
+    prefix: '&f[&3Donator 3&f]&3'
+    suffix: '&f'
+    permissions:
+    - chestbank.use.networks.3
+    - chestbank.create.networks.3
+    - disguisecraft.mob.sheep.*
+    inheritance:
+    - Donator2
+  Donator4:
+    prefix: '&f[&3BOSS&f]&3'
+    suffix: '&f'
+    permissions:
+    - chestbank.use.networks.4
+    - chestbank.create.networks.4
+    - SimpleFly.fly
+    - disguisecraft.mob.*
+    inheritance:
+    - Donator3
+  Moderator:
+    prefix: '&f[&5Moderator&f]&5'
+    suffix: '&f'
+    permissions:
+    - bukkit.command.kick
+    - bukkit.command.ban.*
+    - bukkit.command.unban.*
+    - nocheat.checks.moving.*
+    - lockette.admin.*
+    - OpenInv.openinv
+    - OpenInv.crossworld
+    - OpenInv.exempt
+    - OpenInv.anychest
+    - OpenInv.openinv
+    - disguisecraft.mob*
+    - modtrs.mod
+    - modtrs.command
+    - lwc.mod
+    - modtrs.command.teleport
+    - modtrs.command.complete
+    - modtrs.command.check
+    - modtrs.command.ban
+    - modtrs.command.unban
+    - SpawnerAdjuster.*
+    - SpawnerAdjuster.Commands.*
+    - worldguard.region.wand
+    - worldguard.region.define
+    - worldguard.region.redefine
+    - worldguard.region.select.*
+    - worldguard.region.info
+    - worldguard.region.removeowner.*
+    - worldguard.region.addmember.*
+    - worldguard.region.setpriority.*
+    - worldguard.region.setparent.*
+    - worldguard.region.teleport.*
+    - worldguard.region.remove.*
+    - worldedit.wand.use
+    - worldedit.navigation.thru
+    - worldedit.navigation.unstuck
+    - worldedit.navigation.jumpto
+    - worldedit.wand
+    - worldedit.selection.contract
+    - worldedit.selection.expand
+    - essentials.gm.*
+    - essentials.tp.*
+    - essentials.tp
+    - essentials.gamemode
+    inheritance:
+    - Donator4
+  Admin:
+    prefix: '&f[&cAdmin&f]&c'
+    suffix: '&f'
+    permissions:
+    - disguisecraft.object.*
+    - disguisecraft.block.*
+    - lwc.admin
+    - worldedit.*
+    inheritance:
+    - Moderator
+  serverOP:
+    prefix: '&f[&4ServerOP&f]&4'
+    suffix: '&c'
+    permissions:
+    - OpenInv.overide
+    - ninja.basic
+    - '*'
+    - essentials.*
+  owner2:
+    prefix: '&f[&4Co-Owner&f]&4'
+    suffix: '&c'
+    permissions:
+    - OpenInv.overide
+    - ninja.basic
+    - '*'
+    - essentials.*
+    inheritance:
+    - Admin
+  Owner:
+    prefix: '&f[&4Owner&f]&4'
+    suffix: '&c'
+    permissions:
+    - OpenInv.overide
+    - ninja.basic
+    - '*'
+    - essentials.*
+    inheritance:
+    - Admin
+users:
+  Jardin5:
+    group:
+    - Owner
+  xXxACID_BURNxXx:
+    group:
+    - owner2
+  SpontanousDeath:
+    group:
+    - Admin
+  James2024:
+    group:
+    - Member
+  Ajmcdz:
+    group:
+    - Admin
+  Valkyrie577:
+    group:
+    - Member
+  bobstermen:
+    group:
+    - Member
+    - serverOP
+  tonOcookies:
+    group:
+    - Moderator
+  Chaotic_Baggins:
+    group:
+    - Member
+  Bethasauruss:
+    group:
+    - Admin
+  Ghost_Pack:
+    group:
+    - Member
+  PoisonAlchemist:
+    group:
+    - Member
+  AccountErrorBot:
+    group:
+    - Member
+  RAPE_MASTER69:
+    group:
+    - Member
+  Bayley5:
+    group:
+    - Member
+  Odysseus27:
+    group:
+    - Member
